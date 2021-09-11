@@ -265,6 +265,9 @@ cleanup:
 
 workflows:
   default:
+    triggers:
+      branches:
+        only: [main]
     jobs:
       - build-frontend
       - build-backend
