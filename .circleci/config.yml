@@ -265,13 +265,13 @@ jobs:
 
 workflows:
   default:
-    triggers:
-       - schedule:
-           #cron: "* * * * *"
-           filters:
-             branches:
-               only:
-                 - main
+    # triggers:
+    #    - schedule:
+    #        #cron: "* * * * *"
+    #        filters:
+    #          branches:
+    #            only:
+    #              - main
 
     jobs:
        - build-frontend
