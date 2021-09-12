@@ -267,7 +267,7 @@ workflows:
   default:
     triggers:
        - schedule:
-           cron: "* * * * *"
+           #cron: "* * * * *"
            filters:
              branches:
                only:
