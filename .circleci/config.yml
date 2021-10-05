@@ -122,6 +122,7 @@ jobs:
       # Checkout code from git
       - run:
           name: Ensure back-end infrastructure exists
+          working_directory: ./.circleci
           command: |
             aws cloudformation deploy \
               --template-file files/backend.yml \
