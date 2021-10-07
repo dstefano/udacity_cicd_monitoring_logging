@@ -148,17 +148,21 @@ jobs:
               --output text >> inventory
             cat inventory
       - persist_to_workspace:
-          root: ~/
+          root: .
           paths:
-            - project/.circleci/ansible/inventory.txt
+            - .circleci/ansible/inventory.txt
       #Here's where you will add some code to rollback on failure      
+      #- destroy-environment:
 
-  # configure-infrastructure:
-  #   docker:
-  #     # Docker image here that supports Ansible
-  #   steps:
+  #   configure-infrastructure:
+  #     docker:
+  # #     # Docker image here that supports Ansible
+  #       image: ansible/ansible
+  #     steps:
   #     # Checkout code from git
-  #     # Add ssh keys with fingerprint
+  #       - checkout
+  # #     # Add ssh keys with fingerprint
+  #       - add_
   #     # attach workspace
   #     - run:
   #         name: Install dependencies
