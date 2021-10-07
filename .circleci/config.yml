@@ -122,10 +122,11 @@ jobs:
       # Checkout code from git
       - run:
           name: Ensure back-end infrastructure exists
-          working_directory: ./.circleci
+          #working_directory: ./.circleci
           command: |
+            ls -la
             aws cloudformation deploy \
-              --template-file files/backend.yml \
+              --template-file .circleci/files/backend.yml \
               --tags project=udapeople-backend-pdstefano \
               --stack-name "udapeople-backend-pdstefano-${CIRCLE_WORKFLOW_ID}" \
               --parameter-overrides ID="${CIRCLE_WORKFLOW_ID}"  
